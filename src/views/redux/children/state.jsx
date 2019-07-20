@@ -22,6 +22,7 @@ class State extends Component{
 const mapStateToProps = (state) => ({
 	user: state.user
 })
+
 const mapDispatchToProps = (dispatch) => ({
 	...bindActionCreators(Actions, dispatch)
 })

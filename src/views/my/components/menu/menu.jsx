@@ -1,14 +1,14 @@
-import React, {Component} from "react";
-import {Link} from 'react-router-dom'
+import React, { Component } from "react";
+import { Link } from 'react-router-dom'
 /** ======== Css ======== **/
 import './style.less'
-class Menu extends Component{
+class Menu extends Component {
 	constructor(props) {
 		super(props);
 	}
 	render() {
 		const list = this.props.list || []
-		return(
+		return (
 			<div className="list" >
 				<div className="title">
 					菜单

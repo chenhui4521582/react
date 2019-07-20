@@ -7,6 +7,10 @@ class Index extends Component {
 	constructor(props) {
 		super(props)
 	}
+	componentWillMount() {
+		console.log(this.props.history)
+	}
+
 	render() {
 		return(
 			<div className="index">

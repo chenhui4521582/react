@@ -16,9 +16,16 @@ class My extends Component {
 				{
 					name: 'form',
 					url: '/redux'
+				},
+				{
+					name: 'typeScript',
+					url: '/ts'
 				}
 			]
 		}
+	}
+	gohome() {
+		this.props.history.push({pathname: '/', query: {a: 111}})
 	}
 	render() {
 		return(
