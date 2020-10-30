@@ -7,6 +7,7 @@ import Concat from './children/concat'
 import CssModule from './children/cssModule'
 import SetState from './children/setState'
 import Model from './children/model'
+import ToastDemo from './children/toastDemo'
 /** ======== Style ======== **/
 import styles from './style.module.less'
 
@@ -16,7 +17,7 @@ function NavList(props) {
 		<div className={styles.nav}>
 			{
 				showNav && props.nav.map(item => 
-					<NavLink to={item.url} className={item.className} key={item.name} activeClassName={styles['active']}>{item.name}</NavLink>
+					<NavLink to={item.url} className={`nav-item`} key={item.name} activeClassName={styles['active']}>{item.name}</NavLink>
 				)
 			}
 		</div>
@@ -31,7 +32,8 @@ class Demo extends Component {
 				{name: 'css-模块化', className: 'css-module', url: '/demo/cssmodule'},
 				{name: 'state状态更新', className: 'setState', url: '/demo/setstate'},
 				{name: '父子组件传递', className: 'concat', url: '/demo/concat'},
-				{name: '双向数据绑定', className: 'model', url: '/demo/model'}
+				{name: '双向数据绑定', className: 'model', url: '/demo/model'},
+				{name: '全局Toast', className: 'toast', url: '/demo/toast'}
 			]
 		}
 	}
@@ -46,6 +48,7 @@ class Demo extends Component {
           <Route path="/demo/setstate" component={SetState}></Route>
           <Route path="/demo/concat" component={Concat}></Route>
           <Route path="/demo/model" component={Model}></Route>
+          <Route path="/demo/toast" component={ToastDemo}></Route>
 				</main>
 			</div>
 		)
